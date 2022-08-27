@@ -34,7 +34,6 @@ namespace Pratik
         {
             services.AddControllers();
             services.AddDbContext<BookStoreDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
-            services.AddScoped<IBookStoreDbContext>(provider => provider.GetService<BookStoreDbContext>());
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddScoped<ILoggerService<Log>,DbLogger>();
             services.AddSwaggerGen(c =>

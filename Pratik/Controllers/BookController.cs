@@ -17,7 +17,7 @@ namespace Pratik.Controllers
     [Route("api/[controller]s")]
     public class BookController : ControllerBase
     {
-        private readonly IBookStoreDbContext _bookStoreDbContext;
+        private readonly BookStoreDbContext _bookStoreDbContext;
         private readonly IMapper _mapper;
 
         public BookController(BookStoreDbContext bookStoreDbContext, IMapper mapper)
